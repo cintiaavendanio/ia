@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stand: Herramientas de IA de Uso Cotidiano</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Custom styles */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      /* Slate 900 */
+      color: #f8fafc;
+      /* Slate 50 */
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card {
+      background-color: #1e293b;
+      /* Slate 800 */
+      border: 1px solid #334155;
+      /* Slate 700 */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      /* rounded-lg */
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .btn {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <!-- Container -->
+  <div class="container mx-auto p-4 md:p-8">
+
+    <!-- Header Section -->
+    <header class="text-center mb-12">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-3 gradient-text">
+        Herramientas de IA de Uso Cotidiano
+      </h1>
+      <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+        Descubrí herramientas que escriben por vos, generan presentaciones, editan videos y resumen reuniones en
+        segundos.
+      </p>
+    </header>
+
+    <!-- Grid for AI Tools -->
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+      <!-- Tool: Gamma -->
+      <div id="gamma" class="card rounded-xl p-6 flex flex-col">
+        <h2 class="text-3xl font-bold text-white mb-2">Gamma</h2>
+        <p class="text-lg text-violet-300 mb-4">Generador de presentaciones</p>
+        <p class="text-slate-400 mb-6 flex-grow">
+          Con solo una frase, podés crear una presentación estética y bien estructurada. Ideal para clases, reuniones o
+          cualquier idea que quieras compartir.
+        </p>
+        <div class="video-container mb-6 bg-slate-900">
+          <iframe src="gamma.mp4" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-auto">
+          <a href="https://gamma.app/es" target="_blank"
+            class="btn bg-violet-600 hover:bg-violet-500 text-white font-bold py-2 px-6 rounded-lg w-full sm:w-auto text-center">
+            Probar Gamma
+          </a>
+          <div class="flex items-center gap-3">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://gamma.app/es&bgcolor=1e293b&color=ffffff"
+              alt="QR para Gamma" class="rounded-md border border-slate-600">
+            <span class="text-slate-400 text-sm">Escanear QR</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool: Opus Clip -->
+      <div id="opusclip" class="card rounded-xl p-6 flex flex-col">
+        <h2 class="text-3xl font-bold text-white mb-2">Opus Clip</h2>
+        <p class="text-lg text-blue-300 mb-4">De videos largos a clips virales</p>
+        <p class="text-slate-400 mb-6 flex-grow">
+          Transforma videos largos en varios clips cortos y atractivos, listos para publicar. Añade subtítulos y zoom
+          dinámico automáticamente para máximo impacto.
+        </p>
+        <div class="video-container mb-6 bg-slate-900">
+          <iframe src="opusclip.mp4" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-auto">
+          <a href="https://www.opus.pro/" target="_blank"
+            class="btn bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-6 rounded-lg w-full sm:w-auto text-center">
+            Probar Opus Clip
+          </a>
+          <div class="flex items-center gap-3">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://www.opus.pro/&bgcolor=1e293b&color=ffffff"
+              alt="QR para Opus Clip" class="rounded-md border border-slate-600">
+            <span class="text-slate-400 text-sm">Escanear QR</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool: Fathom -->
+      <div id="fathom" class="card rounded-xl p-6 flex flex-col">
+        <h2 class="text-3xl font-bold text-white mb-2">Fathom</h2>
+        <p class="text-lg text-emerald-300 mb-4">Tu asistente de reuniones</p>
+        <p class="text-slate-400 mb-6 flex-grow">
+          ¿Saliste de una reunión sin saber qué hacer? Fathom graba, transcribe y resume tus videollamadas, destacando
+          tareas y tópicos importantes.
+        </p>
+        <div class="video-container mb-6 bg-slate-900">
+          <iframe src="Fathom_.mp4" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-auto">
+          <a href="https://fathom.video/" target="_blank"
+            class="btn bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-6 rounded-lg w-full sm:w-auto text-center">
+            Probar Fathom
+          </a>
+          <div class="flex items-center gap-3">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://fathom.video/&bgcolor=1e293b&color=ffffff"
+              alt="QR para Fathom" class="rounded-md border border-slate-600">
+            <span class="text-slate-400 text-sm">Escanear QR</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tool: Toki -->
+      <div id="toki" class="card rounded-xl p-6 flex flex-col">
+        <h2 class="text-3xl font-bold text-white mb-2">Toki (Dola)</h2>
+        <p class="text-lg text-rose-300 mb-4">Asistente de productividad</p>
+        <p class="text-slate-400 mb-6 flex-grow">
+          Organiza tu día desde WhatsApp. Agenda recordatorios, responde correos y procesa texto con este copiloto que
+          te ayuda a gestionar tu tiempo.
+        </p>
+        <div class="mb-6 bg-slate-900 rounded-lg overflow-hidden">
+          <img src="toki.png" alt="Captura de Toki" class="w-full max-h-72 object-contain mx-auto" />
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-auto">
+          <a href="https://yestoki.com/es/chat" target="_blank"
+            class="btn bg-rose-600 hover:bg-rose-500 text-white font-bold py-2 px-6 rounded-lg w-full sm:w-auto text-center">
+            Probar Toki
+          </a>
+          <div class="flex items-center gap-3">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://yestoki.com/es/chat/&bgcolor=1e293b&color=ffffff"
+              alt="QR para Toki" class="rounded-md border border-slate-600">
+            <span class="text-slate-400 text-sm">Escanear QR</span>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <!-- Organizer Section -->
+    <section class="mt-16 text-center">
+      <h2 class="text-3xl font-bold text-white mb-8">¿Querés conocer y charlar sobre IA? Sumate a Birria </h2>
+      <div class="max-w-md mx-auto bg-slate-800 rounded-xl p-6 border border-slate-700">
+        <!-- Placeholder for Logo -->
+        <div
+          class="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gradient-to-br from-yellow-400 to-orange-500 mb-4 flex items-center justify-center">
+          <img src="birria.png" alt="Logo Birria" class="w-full h-full object-cover" />
+        </div>
+        <h3 class="text-2xl font-bold text-white">Birria</h3>
+        <p class="text-slate-400 mt-2 mb-4">
+          Early adopters de IA rosarinos de todas las profesiones.
+          Exploramos la inteligencia artificial sin jergas, en charlas con cerveza 🍻
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-auto">
+          <!-- UPDATE THIS LINK with the correct Instagram URL -->
+          <a href="https://www.instagram.com/comunidadbirria/" target="_blank"
+            class="btn bg-orange-600 hover:bg-orange-500 text-white font-bold py-2 px-6 rounded-lg w-full sm:w-auto text-center">
+            Seguir en Instagram
+          </a>
+          <div class="flex items-center gap-3">
+            <!-- UPDATE THIS QR CODE DATA with the correct Instagram URL -->
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://www.instagram.com/comunidadbirria/&bgcolor=1e293b&color=ffffff"
+              alt="QR para Instagram de Birria" class="rounded-md border border-slate-600">
+            <span class="text-slate-400 text-sm">Escanear QR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center mt-12">
+      <p class="text-slate-500">Estas herramientas no reemplazan lo que hacés, pero te dan más tiempo para lo que más
+        importa.</p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
